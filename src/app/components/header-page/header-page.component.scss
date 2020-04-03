@@ -1,0 +1,70 @@
+@import "../../../stylings/variables";
+@import "../../../stylings/buttons";
+@import "../../../stylings/before-icons";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    padding-top: 30px;
+    
+    > button {   
+        margin-bottom: 15px;
+        @extend .orange-button;
+        @extend .button-effect;
+        
+        &:hover {            
+            background-color: $orange-color;            
+        }
+    }    
+
+    ul {
+        margin: 0;
+        padding: 0;
+        text-transform: $uppercase;
+            
+        li {
+            font-size: 0.7em;                        
+            line-height: 20px;            
+            padding: 0 10px 5px 10px; 
+            margin-right: 20px;
+            display: inline-block;
+            
+            &.active {
+                border-bottom: solid 2px $brand-color;
+
+                span {
+                    color: $brand-color;                    
+                }               
+            } 
+    
+            span {
+                font-size: 2em;
+                display: block;
+                position: relative;
+                padding-left: 30px;             
+             }
+
+            span.cars {
+                &:before {
+                    @extend .before;
+                    background: url("/assets/icons/automovel.svg") no-repeat;                  
+                }
+            }
+
+            span.motos {
+                &:before {
+                    @extend .before;
+                    background: url("/assets/icons/moto.svg") no-repeat;                    
+                }
+            }
+
+            a {                
+                outline: none;
+                text-decoration: none;
+                padding-left: 30px;                
+            }      
+            
+        }
+    }    
+}

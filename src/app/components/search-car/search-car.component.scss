@@ -1,0 +1,116 @@
+@import "../../../stylings/variables";
+@import "../../../stylings/buttons";
+
+.search {
+    font-size: 0.8em;
+    padding: 30px 50px;
+    background-color: $white;    
+
+    display: flex;
+    justify-content: space-between;   
+
+    .searchLeft {
+        margin-right: 15px;
+    }
+       
+    .searchLeft,
+    .searchRight {
+        width: 50%;                
+    }
+
+    select,
+    input,
+    button {
+        font-size: 1em;
+        margin: 0 10px 10px 0;        
+        padding: 5px; 
+    }
+
+    .checkbox-types {
+        label {
+            margin-right: 20px;
+        }
+    }    
+
+    input.localization {
+        width: 55%;
+        margin-right: 0;
+    }
+
+    select.raio {
+        width: 38%;
+        padding: 6px;
+        border-left: transparent;
+    }
+
+    select.version {
+        width: 100%;
+    }
+
+    select {
+        width: 46%;
+    }   
+
+    .blocks {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0 10px 0;   
+    }
+    
+    .footer-search {
+        display: flex;
+        justify-content: space-between;        
+    }
+
+    .search-advanced {        
+        color: $brand-color;
+        @extend .reset-buttons;        
+    }
+
+    .clean-filter {
+        color: #8d8c8c;
+        line-height: 18px;
+        @extend .reset-buttons;                             
+    }
+
+    .result-button {        
+        color: $white;        
+        padding: 10px 60px;        
+        text-transform: $uppercase;
+        background-color: $brand-color;        
+        opacity: 1;
+        border: solid 2px $brand-color;
+        @extend .reset-buttons;     
+        @extend .button-effect;
+        
+        &:hover {
+            background-color: white;
+            border: solid 2px $brand-color;
+            color: $brand-color;
+        }
+    }    
+}
+
+/* Medias Queries */
+@media screen and (max-width: 767px) {
+    .search {        
+        padding: 10px 30px;        
+
+        .blocks {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .searchLeft,
+        .searchRight {
+            width: 100%;
+        }
+
+        select,
+        select.raio,
+        input.localization  {
+            width: 100%;
+        }       
+    }    
+}

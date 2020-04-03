@@ -1,0 +1,39 @@
+@import "variables";
+
+.orange-button {
+    color: $orange-color;
+    border: solid 2px $orange-color;    
+    padding: 5px 25px;
+    background-color: transparent;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    
+    &:focus {
+        outline-style: none;
+    }          
+  }
+
+  .reset-buttons {
+    background-color: transparent;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    
+    &:focus,
+    &:hover {
+        outline-style: none;
+    }
+  }
+
+  .button-effect {
+    opacity: 0.5;
+
+    &:hover {
+      opacity:1;
+      color: $white;
+      transition: all 0.5s ease;
+    }
+  }
+  

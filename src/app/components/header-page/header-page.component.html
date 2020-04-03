@@ -1,0 +1,15 @@
+<div class="header">
+    <ul>
+        <li [ngClass]="{'active': isClicked}" (click)="clickActive()">
+            <a href="" [routerLink]="['search-car']">
+                Comprar <span class="cars"> carros</span>
+            </a>
+        </li>
+        <li [ngClass]="{'active': !isClicked}" (click)="clickActive()">
+            <a href="" [routerLink]="['search-moto']">
+                Comprar <span class="motos">motos</span>
+            </a>
+        </li>
+    </ul>
+    <button>Vender meu carro</button>
+</div>
